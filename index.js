@@ -1376,8 +1376,6 @@ function BeeSwarmSimulator(DATA){
                 player.updateInventory()
             }
         },
-        
-items.ticket.amount+=99999999
 
         pineapple_instant_converter:{
             
@@ -1406,7 +1404,7 @@ items.ticket.amount+=99999999
             },minX:8,maxX:13.5,minY:-4,maxY:2,minZ:17,maxZ:23,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
                 
                 textRenderer.add(player.pollen,[player.body.position.x,player.body.position.y+1,player.body.position.z],COLORS.honey,1,'⇆')
-                player.honey+=Math.ceil(player.pollen*999999999999999999999999)
+                player.honey+=Math.ceil(player.pollen*player.HoneyPerPollen)
                 player.pollen=0
                 items.ticket.amount--
                 player.updateInventory()
